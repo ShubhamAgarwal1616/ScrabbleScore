@@ -40,5 +40,11 @@ describe ScrabbleScore do
       end
     end
 
+    context "test word 'quirky' scores twenty two" do
+      it "returns twenty two" do
+        expect(ScrabbleScore.calculate_score("quirky")).to eql(22)
+      end
+    end
+
   end
 end

@@ -4,6 +4,7 @@ class ScrabbleScore
     if word == nil
       return 0
     end
+    word = word.upcase
     letter_values = {
         /[AEIOULNRST]/ => 1,
         /[DG]/ => 2,
