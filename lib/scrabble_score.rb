@@ -1,6 +1,8 @@
 class ScrabbleScore
   def self.calculate_score(word)
-    if word.length==0
+    if word==nil
+      0
+    elsif word.length==0
       0
     end
   end
