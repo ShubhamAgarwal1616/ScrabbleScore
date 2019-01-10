@@ -23,14 +23,20 @@ describe ScrabbleScore do
     end
 
     context "test character 'A' scores one" do
-      it "returns zero" do
+      it "returns one" do
         expect(ScrabbleScore.calculate_score("A")).to eql(1)
       end
     end
 
     context "test character 'f' scores four" do
-      it "returns zero" do
-        expect(ScrabbleScore.calculate_score("f")).to eql(4)
+      it "returns four" do
+        expect(ScrabbleScore.calculate_score("F")).to eql(4)
+      end
+    end
+
+    context "test word 'street' scores six" do
+      it "returns six" do
+        expect(ScrabbleScore.calculate_score("STREET")).to eql(6)
       end
     end
 

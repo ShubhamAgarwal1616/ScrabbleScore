@@ -1,15 +1,23 @@
 class ScrabbleScore
+
   def self.calculate_score(word)
     if word == nil
-      0
-    elsif word.length == 0
-      0
-    elsif word == " "
-      0
-    elsif word == "A"
-      1
-    elsif word == "f"
-      4
+      return 0
     end
+    letter_values = {
+        /[AEIOULNRST]/ => 1,
+        /[DG]/ => 2,
+        /[BCMP]/ => 3,
+        /[FHVWY]/ => 4,
+        /[K]/ => 5,
+        /[JX]/ => 8,
+        /[QZ]/ => 10
+    }
+    word_score = 0
+    letter_values.each do |letter , value|
+      word_score += word.scan(letter).count * value
+    end
+    return word_score
   end
 end
+
