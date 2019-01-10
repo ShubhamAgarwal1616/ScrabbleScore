@@ -16,5 +16,11 @@ describe ScrabbleScore do
       end
     end
 
+    context "test whitespace scores zero" do
+      it "returns zero" do
+        expect(ScrabbleScore.calculate_score(" ")).to eql(0)
+      end
+    end
+
   end
 end
