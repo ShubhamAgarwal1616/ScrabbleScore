@@ -22,5 +22,11 @@ describe ScrabbleScore do
       end
     end
 
+    context "test character 'A' scores one" do
+      it "returns zero" do
+        expect(ScrabbleScore.calculate_score("A")).to eql(1)
+      end
+    end
+
   end
 end

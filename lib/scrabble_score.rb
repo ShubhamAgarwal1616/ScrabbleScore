@@ -6,6 +6,8 @@ class ScrabbleScore
       0
     elsif word==" "
       0
+    elsif word=="A"
+      1
     end
   end
 end
